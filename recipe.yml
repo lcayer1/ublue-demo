@@ -5,7 +5,7 @@ name: ubluedemo
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/vauxite-main
+base-image: ghcr.io/ublue-os/bluefin
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -48,7 +48,7 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-38/stefan-maassen-wezterm-fedora-38.repo
+    # - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-38/stefan-maassen-wezterm-fedora-38.repo
    
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -65,7 +65,8 @@ rpm:
     # Add your own below:
     # Example:
     - alacritty
-    - wezterm
+    - starship
+    #- wezterm
     - zoxide
     - neofetch
     
@@ -76,7 +77,7 @@ rpm:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     #- firefox
     #- firefox-langpacks
-    #- gnome-terminal
+    - gnome-terminal
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
