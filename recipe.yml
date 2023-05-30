@@ -65,7 +65,6 @@ rpm:
     # Add your own below:
     # Example:
     - alacritty
-    - starship
     #- wezterm
     - zoxide
     - neofetch
