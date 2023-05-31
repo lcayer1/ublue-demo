@@ -80,7 +80,6 @@ rpm:
     - gucharmap
     - simple-scan
     - eom
-    - gcm-viewer
     - redshift
     - xawtv
     - xfburn
