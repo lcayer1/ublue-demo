@@ -1,11 +1,11 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: ubluedemo
+name: ublue-cinnamon
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/cinnamon-main
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -76,7 +76,14 @@ rpm:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     #- firefox
     #- firefox-langpacks
-    #- gnome-terminal
+    - gnome-calendar
+    - gucharmap
+    - simple-scan
+    - eom
+    - gcm-viewer
+    - redshift
+    - xawtv
+    - xfburn
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
